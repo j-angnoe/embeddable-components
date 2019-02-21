@@ -1,0 +1,30 @@
+{
+  "name": "embeddable-components-examples",
+  "version": "0.0.1",
+  "description": "Some examples for embeddable-components",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts" : {
+    "watch" : "webpack --watch",
+    "start" : "static -p 8181 ."
+  },
+  "dependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^2.1.0",
+    "node-static": "^0.7.11",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "style-loader": "^0.23.1",
+    "vue": "^2.6.6",
+    "vue-loader": "^15.6.4",
+    "vue-template-compiler": "^2.6.6",
+    "webpack": "^4.29.5"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.2.3"
+  }
+}

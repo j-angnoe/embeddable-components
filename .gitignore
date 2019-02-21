@@ -1,0 +1,6 @@
+node_modules/
+examples/node_modules
+dist/
+*.lock
+package-lock.json
+*.log
