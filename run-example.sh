@@ -1,12 +1,10 @@
 # Install 
-npm install node-static;
-
 cd examples;
-npm install;
+yarn;
 
-static . 
+echo "Open your browser at: http://localhost:8181/index.html";
 
-echo "Open your browser at: http://localhost:8080/examples/index.html";
+yarn start;
 
 
 
