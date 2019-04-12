@@ -4,7 +4,7 @@
 	"description": "Embeddable Components Principle and implementation",
 	"main": "lib/EmbeddableComponents.js",
 	"files" : [
-		"lib/EmbeddableComponents.js"
+		"lib/"
 	],
 	"directories": {
 		"example": "examples"
