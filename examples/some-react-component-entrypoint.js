@@ -8,7 +8,7 @@
  */
 
 import SomeReactComponent from './components/some-react-component';
-import { EmbeddableComponents } from '../EmbeddableComponents';
+import { EmbeddableComponents } from '../WebComponent';
 
 import React from 'react';
 import ReactDOM from 'react-dom';

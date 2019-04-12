@@ -1,7 +1,7 @@
 
 
 import SomeVueComponent from './components/some-vue-component.vue';
-import { EmbeddableComponents } from '../EmbeddableComponents';
+import { EmbeddableComponents } from '../WebComponent';
 import Vue from 'vue';
 
 
