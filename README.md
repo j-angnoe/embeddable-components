@@ -3,7 +3,16 @@ This is a convention on how to build (web) components that can be embedded
 in third party (web) systems.
 
 ## Demo
-[Check out a demo here](http://fluxfx.nl/embeddable-components/examples/)
+Embed widgets by doing:
+
+```
+<some-react-component param1="p1..." param2="p2..."></some-react-component>
+<script src="http://fluxfx.nl/embeddable-components/examples/dist/some-react-component.js"></script>
+```
+
+See it in action: https://jsfiddle.net/x02Lwcna/
+
+[Check out Vue examples and more](http://fluxfx.nl/embeddable-components/examples/)
 
 ## The goal
 Sharing and reusing end-user facing pieces of software, without using
