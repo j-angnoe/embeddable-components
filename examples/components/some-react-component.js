@@ -12,7 +12,8 @@ class MyCarousel extends Component {
 
     this.state = {
       counter: 0
-    };
+	};
+	this.rootElement = React.createRef();
   }
     render() {
 		try {
@@ -21,7 +22,7 @@ class MyCarousel extends Component {
 			var scriptUrl = false
 		}
       return (
-        <div style={ {border: "3px solid red", padding: '10px'} }>
+        <div ref={this.rootElement} style={ {border: "3px solid red", padding: '10px'} }>
           <h1 style={ { margin: 0 } }>Example React component</h1>
           { this.props.param1 && <div>Value of param1: { this.props.param1 }</div> }
           { this.props.param2 && <div>Value of param2: { this.props.param2 }</div> }
@@ -43,7 +44,7 @@ class MyCarousel extends Component {
     incrementCounter(event) {
       var myEvent = new CustomEvent('increment-counter', { bubbles: true });
 
-      event.target.dispatchEvent(myEvent);
+      this.rootElement.current.dispatchEvent(myEvent);
 
       this.setState(state => {
         return {

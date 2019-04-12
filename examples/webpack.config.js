@@ -26,7 +26,12 @@ module.exports = {
           }
         ]
     },
-    resolve: { extensions: ["*", ".js", ".jsx", "*.vue"] },
+    resolve: {
+		alias: {
+			'embeddable-components': path.resolve(__dirname, '..')
+		},
+		extensions: ["*", ".js", ".jsx", "*.vue"]
+	},
     output: {
       path: path.resolve(__dirname, "dist/"),
       publicPath: "/dist/",

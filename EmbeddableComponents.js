@@ -43,10 +43,7 @@ var EmbeddableComponents = {
 				if (!hasBeenStarted) {
 						this.start();
 				}
-				// next tick
-				setTimeout(() => {
-						anticipatedSelectors[tagName] = creatorFunction;
-				}, 1);
+				anticipatedSelectors[tagName] = creatorFunction;
 		},
 		/**
 		 * Return all element attributes as a simple javascript object:

@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html>
     <body>
         <h1>Vue and React on one page...</h1>
         <p>It also demonstrates how one can receive events that
             are emitted from within the components.
-            This way an embeddable component can interact with the 
+            This way an embeddable component can interact with the
             host page (this html).
         </p>
         <h2>React example</h2>
@@ -13,7 +14,7 @@
             id="react-component"
         ></some-react-component>
 
-        <script src="dist/some-react-component.js"></script>
+        <script src="../dist/some-react-component.js"></script>
 
         <h2>Vue example</h2>
 
@@ -23,10 +24,10 @@
         ></some-vue-component>
 
 
-        <h4>Click on 'Teller' and watch us catch the events:</h4>
+        <h4>Click on 'Increment counter' and watch the emitted events:</h4>
         <textarea id="debug" style="width:100%; height: 400px;"></textarea>
 
-        <script src="dist/some-vue-component.js"></script>
+        <script src="../dist/some-vue-component.js"></script>
 
 
         <script>
@@ -44,13 +45,13 @@
         document.getElementById('react-component').addEventListener('increment-counter', event => {
             debug('React triggered an increment-counter event');
         });
-        
+
         // a specific listener for events that happen inside the vue componet:
         document.getElementById('vue-component').addEventListener('increment-counter', event => {
             debug('Vue triggered an increment-counter event');
         });
 		</script>
-		
+
 
     </body>
 </html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+		<div>
+			<a href="../index.html">Back to index</a>
+		</div>
+
+		<h1>React: Supported features</h1>
+
+		<!-- Passing parameters -->
+
+		<p>Multiple instances causes no problems:</p>
+        <some-react-component
+            id="react-component-1"
+            param1="instance 1 param1"
+            param2="instance 1 param2"
+		></some-react-component>
+
+		<some-react-component
+			id="react-component-2"
+			param1="instance 2 param1"
+			param2="instance 2 param2"
+		></some-react-component>
+        <script src="../dist/some-react-component.js"></script>
+
+		<hr>
+		<p>
+			The host page can respond to the `increment-counter` event.
+			Click on `Increment counter` and whats a message appear.
+		</p>
+
+		<!-- Host page (this page) can respond to events -->
+        <div id="counter-was-clicked" style="opacity:0; background: yellow; font-size: 120%; padding: 10px;">
+            <!-- counter was clicked message -->
+        </div>
+
+
+		<p>
+			Targetting elements with the supplied id remains intact.
+			<button onclick="var t=document.getElementById('react-component-1');t.parentNode.removeChild(t);">Try to remove react-component-1</button>
+		</p>
+
+		<p>
+			Dynamic mounting of this component is no problem:
+			<button onclick="addComponent()">Add another one</button>
+		</p>
+
+
+		<p>
+			Combining it with React is possible as well.
+			<button onclick="addVueComponent()">Add React component</button>
+		</p>
+
+        <script>
+        var timeout = null;
+        document.addEventListener('increment-counter', event => {
+			var targetElement = event.target.id;
+
+
+			var message = document.getElementById('counter-was-clicked');
+			message.style.opacity = 1;
+			var timestamp = (new Date).toString().match(/[0-9]{2}:[0-9]{2}:[0-9]{2}/)[0];
+
+			message.innerHTML = '[' + timestamp + '] Increment counter was clicked (' + targetElement + ')';
+
+            clearTimeout(timeout);
+            timeout = setTimeout( () => {
+                message.style.opacity = 0;
+            }, 1500);
+		});
+
+		var newComponentId = 3;
+		function addComponent() {
+
+			var el = document.createElement('some-react-component');
+			el.id = 'react-component-' + (newComponentId++);
+			el.setAttribute('param1', 'instance ' + el.id + ' param1');
+			el.setAttribute('param2', 'instance ' + el.id + ' param1');
+			document.body.appendChild(el);
+
+			setTimeout(() => {
+				window.scrollTo(0,document.body.scrollHeight);
+			}, 300);
+		}
+
+		var vueComponentId = 1;
+		function addVueComponent() {
+
+			var script = document.createElement('script');
+			script.src = '../dist/some-vue-component.js';
+			script.onload = () => {
+				var el = document.createElement('some-vue-component');
+				el.id = 'vue-component-' + (vueComponentId++);
+				el.setAttribute('param1', 'instance ' + el.id + ' param1');
+				el.setAttribute('param2', 'instance ' + el.id + ' param1');
+				document.body.appendChild(el);
+
+				setTimeout(() => {
+					window.scrollTo(0,document.body.scrollHeight);
+				}, 300);
+			}
+			document.body.appendChild(script);
+		}
+        </script>
+    </body>
+</html>

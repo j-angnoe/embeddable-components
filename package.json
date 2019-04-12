@@ -2,9 +2,9 @@
 	"name": "embeddable-components",
 	"version": "0.0.2",
 	"description": "Embeddable Components Principle and implementation",
-	"main": "EmbeddableComponents.js",
+	"main": "lib/EmbeddableComponents.js",
 	"files" : [
-		"EmbeddableComponents.js"
+		"lib/EmbeddableComponents.js"
 	],
 	"directories": {
 		"example": "examples"
