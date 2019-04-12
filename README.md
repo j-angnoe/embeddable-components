@@ -11,7 +11,7 @@ iframes. (Examples: media embeds, reservation widgets, calculators)
 
 ## How should this work:
 There are 3 parties involved here: The supplier of the widget,
-the consumer that want to integrate the widget in his/her product, and
+the consumer that wants to integrate the widget in his/her product, and
 finally the end-user that will use the functionality.
 
 The consumer will receive instruction on how to integrate the product.
@@ -34,19 +34,19 @@ And insert this piece where you want the widget to appear:
 - The widget may appear more than one time on a page.
 - Each occurence may have its own parameters
 - It's possible that widgets will be added to the page or removed
-  from the page.
+  from the page, at any time.
 - It's possible for a widget to communicate with the host page via events.
 - The consumer must not be forced to use a certain web-framework
 - The widget must not interfere with the host document. No overwritting of
   globals (for instance jquery/$)
-- The supplier needs to take care of the correct CORS configuration, if
-  backend communication is used.
+- The supplier needs to take care of the correct CORS configuration (for backend
+  api calls).
 - The supplier is free to use any technology/framework (the right tool for
   the job), without interfering with the host, and vice-versa.
 
 ## Use of webframeworks
 Basically each framework dictates that you have a root-node for the
-application to mount. Usually one will add a <div id="app"> to the
+application to mount. Usually one will add a `<div id="app">` to the
 page and point the framework there (https://vuejs.org/v2/guide/,
 https://reactjs.org/docs/add-react-to-a-website.html).
 
