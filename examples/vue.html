@@ -15,8 +15,11 @@
             param2="Waarde voor param2"
         ></some-vue-component>
 
+		<hr>
+		This can even be embedded by a jsfiddle!
+		<a href="https://jsfiddle.net/6x1yeko9/">https://jsfiddle.net/6x1yeko9//</a>
 
-        
+
         <div id="counter-was-clicked" style="display:none;">
             Counter is geklikt!
         </div>
@@ -26,10 +29,10 @@
         <script>
         var timeout = null;
         document.addEventListener('increment-counter', event => {
-            clearTimeout(timeout);            
-            document.getElementById('counter-was-clicked').style.display = 'block';    
+            clearTimeout(timeout);
+            document.getElementById('counter-was-clicked').style.display = 'block';
             setTimeout( () => {
-                document.getElementById('counter-was-clicked').style.display = 'none';    
+                document.getElementById('counter-was-clicked').style.display = 'none';
             }, 3000);
         });
         </script>

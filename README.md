@@ -3,7 +3,7 @@ This is a convention on how to build (web) components that can be embedded
 in third party (web) systems.
 
 ## Demo:
-[Check out a demo here](https://raw.githack.com/j-angnoe/embeddable-components/master/examples/)
+[Check out a demo here](http://fluxfx.nl/embeddable-components/examples/)
 
 ## The goal:
 Sharing and reusing end-user facing pieces of software, without using
