@@ -75,6 +75,27 @@ var EmbeddableComponents = {
             attr[a.nodeName] = val;
         }
         return attr;
+    },
+
+    /**
+     * getScriptOrigin
+     * 
+     * Utility function:
+     * Returns the origin of the server that hosts the current script.
+     * The origin contains the scheme, host and portnumber (if necessary)
+     * 
+     * Example:
+     * getScriptOrigin() -> http://localhost:8181
+     */
+    getScriptOrigin() {
+        try {
+            var urlParser = document.createElement('a');
+            urlParser.href = document.currentScript.src;
+            return urlParser.origin;
+        } catch (error) {
+            console.error('getScriptOrigin error:', error);
+        }
+        return '';
     }
 }
 

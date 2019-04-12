@@ -15,4 +15,3 @@ import ReactDOM from 'react-dom';
 
 EmbeddableComponents.registerLibrary({React, ReactDOM});
 EmbeddableComponents.registerReactComponent('some-react-component', SomeReactComponent);
-
