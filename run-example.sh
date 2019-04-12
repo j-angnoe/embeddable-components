@@ -1,4 +1,4 @@
-# Install 
+# Install
 cd examples
 yarn
 yarn watch &
