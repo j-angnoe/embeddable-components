@@ -1,6 +1,6 @@
 {
 	"name": "embeddable-components",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Embeddable Components Principle and implementation",
 	"main": "EmbeddableComponents.js",
 	"directories": {
@@ -10,7 +10,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start" : "bash run-example.sh"
 	},
-	"author": "Joshua Angnoe <joshua@chunkagency.com>",
+	"author": "Joshua Angnoe <joshua@fluxfx.nl>",
 	"license": "ISC",
 	"dependencies": {
 		"@babel/cli": "^7.2.3",

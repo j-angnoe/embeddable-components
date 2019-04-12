@@ -251,11 +251,5 @@ EmbeddableComponents.registerReactComponent = function registerReactComponent (t
 		[].map.call(document.querySelectorAll(tagName), reactCreator);
 }
 
-
-/**
- * Make sure EmbeddableComponents is inspectable via DevTools.
- */
 module.exports.EmbeddableComponents = EmbeddableComponents;
-window.EmbeddableComponents = window.EmbeddableComponents || module.exports.EmbeddableComponents;
-
-
+module.exports.default = EmbeddableComponents;
