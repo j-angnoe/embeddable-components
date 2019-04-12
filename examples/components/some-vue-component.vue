@@ -4,6 +4,7 @@
         <div v-if="param1">Value of param1: {{param1}}</div>
         <div v-if="param2">Value of param2: {{param2}}</div>
         <button @click="incrementCounter()">Increment counter</button>
+		<div>Counter  value: {{counter}}</div>
 
 		<div v-if="scriptUrl" class="embed-me">
 			<p>Embed me:</p>
