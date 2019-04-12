@@ -2,16 +2,17 @@
 This is a convention on how to build (web) components that can be embedded
 in third party (web) systems.
 
-## Demo:
+## Demo
 [Check out a demo here](http://fluxfx.nl/embeddable-components/examples/)
 
-## The goal:
+## The goal
 Sharing and reusing end-user facing pieces of software, without using
-iframes. (Examples: media embeds, reservation widgets, calculators).
+iframes. (Examples: media embeds, reservation widgets, calculators)
 
 ## How should this work:
 There are 3 parties involved here: The supplier of the widget,
-the consumer that want to integrate the widget in his/her product, and finally the end-user that will use the functionality.
+the consumer that want to integrate the widget in his/her product, and
+finally the end-user that will use the functionality.
 
 The consumer will receive instruction on how to integrate the product.
 It's possible that the widget can be configured in a way. This solution
@@ -36,23 +37,26 @@ And insert this piece where you want the widget to appear:
   from the page.
 - It's possible for a widget to communicate with the host page via events.
 - The consumer must not be forced to use a certain web-framework
-- The widget must not interfere with the host document. No overwritting of globals (for instance jquery/$)
+- The widget must not interfere with the host document. No overwritting of
+  globals (for instance jquery/$)
 - The supplier needs to take care of the correct CORS configuration, if
   backend communication is used.
-- The supplier is free to use any technology (the right tool for the job),
-  without interfering with the host, and vice-versa.
+- The supplier is free to use any technology/framework (the right tool for
+  the job), without interfering with the host, and vice-versa.
 
 ## Use of webframeworks
 Basically each framework dictates that you have a root-node for the
 application to mount. Usually one will add a <div id="app"> to the
-page and point the framework there (https://vuejs.org/v2/guide/, https://reactjs.org/docs/add-react-to-a-website.html).
+page and point the framework there (https://vuejs.org/v2/guide/,
+https://reactjs.org/docs/add-react-to-a-website.html).
 
 This wont fit our requirements. The bootstrapping process of embeddable
 components that use frameworks needs to be more flexible. Instead of relying
 on the existence of a certain DOM element, one should wait until that
 certain DOM element is added to the DOM. Besides reactive bootstrapping, one
 should also take care of proper cleanup when your application is removed
-from the document. When you finally bootstrapped the application host parameters need to be hoisted to your application....
+from the document. When you finally bootstrapped the application host parameters
+need to be hoisted to your application....
 
 ## The embeddable component library
 This library takes care of reacting to relevant DOM changes, so a supplier
@@ -102,6 +106,18 @@ EmbeddableComponents.registerLibrary({Vue: Vue});
 EmbeddableComponents.registerVueComponent('fancy-widget', FancyWidget);
 
 ```
+
+## The idea behind it
+Useful webframeworks emerged years ago. Companies jumped ship, rewrote their
+jquery dependent codebases and then new frameworks emerged, and codebases were rewritten
+again. There is a very real chance that we're going to have to rewrite our codebases
+again in a while. There is not much we can do about it. Fresh frontend code has
+an expiry date.
+
+And this is where the principle of embeddable components may help us retain more
+value for a longer time. An embeddable component that is easy to embed and 'minds its
+own business' can survive a migration to new surroundings. When doing migrations we
+may truly reuse it instead of rewriting it.
 
 
 

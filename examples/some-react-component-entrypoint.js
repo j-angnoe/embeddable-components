@@ -11,12 +11,6 @@ import SomeReactComponent from './components/some-react-component';
 import EmbeddableComponents from 'embeddable-components';
 import ReactSupport from 'embeddable-components/lib/frameworks/react';
 
-
-console.log(require('embeddable-components'));
-
-console.log(EmbeddableComponents);
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
