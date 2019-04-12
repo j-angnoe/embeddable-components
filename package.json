@@ -1,9 +1,9 @@
 {
 	"name": "embeddable-components",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Embeddable Components Principle and implementation",
 	"main": "lib/EmbeddableComponents.js",
-	"files" : [
+	"files": [
 		"lib/"
 	],
 	"directories": {
@@ -11,7 +11,7 @@
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start" : "bash run-example.sh"
+		"start": "bash run-example.sh"
 	},
 	"author": "Joshua Angnoe <joshua@fluxfx.nl>",
 	"license": "MIT",
