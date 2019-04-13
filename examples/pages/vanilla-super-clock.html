@@ -12,10 +12,19 @@
         <super-clock></super-clock>
 		<script src="../dist/vanilla-super-clock.js"></script>
 
+		<br><br>
+		<hr>
 
+		<p>Embed me:<br>
+		<code>
+			&lt;super-clock&gt;&lt;/super-clock&gt;<br>
+			&lt;script src="{url}"&gt;&lt;/script&gt;
+		</code>
+		</p>
 		<hr>
 		This can even be embedded by a jsfiddle!
 		<a target="_blank" ref="noopener noreferrer" href="https://jsfiddle.net/x02Lwcna/">https://jsfiddle.net/x02Lwcna/</a>
+
 
 		<hr>
 
@@ -26,5 +35,14 @@
 				<a href="../vanilla-super-clock.js">vanilla-super-clock.js - the entrypoint for webpack.</a>
 			</li>
 		</ul>
+
+		<script>
+		var url = document.createElement('a');
+		url.href = '../dist/vanilla-super-clock.js';
+
+		var codeBlock = document.querySelector('code');
+		codeBlock.innerHTML = codeBlock.innerHTML.replace('{url}', url.href);
+		</script>
+
     </body>
 </html>
