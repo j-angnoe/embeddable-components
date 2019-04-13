@@ -5,7 +5,8 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
     entry: {
         'some-react-component': './some-react-component-entrypoint',
-        'some-vue-component': './some-vue-component-entrypoint'
+		'some-vue-component': './some-vue-component-entrypoint',
+		'vanilla-super-clock' : './vanilla-super-clock'
     },
     mode: 'development',
     module: {
