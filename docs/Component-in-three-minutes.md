@@ -20,17 +20,16 @@ Make sure you create these two files:
 
 Lets add some content, you may get creative here.
 
-three-minute-component.html
-
+three-minute-component.html:
 ```html
 <h1>My first three minute component</h1>
 
-<three-minute-component your-param="your-value"></three-minute-component>
+<three-minute-component your-name="World"></three-minute-component>
 
 <script src="three-minute-component.js"></script>
 ```
 
-three-minute-component.js
+three-minute-component.js:
 ```js
 alert("It's working");
 ```
@@ -50,11 +49,14 @@ You should see an alert which says `It's working`.
 
 Let's replace the content of three-minute-component.js
 
+three-minute-components.js:
 ```js
 import EmbeddableComponents from 'embeddable-components';
 
 EmbeddableComponents.registerTagName('three-minute-component', function (domElement) {
-    domElement.innerHTML = 'Hello world!';
+	const name = domElement.getAttribute('your-name') || '[noname]';
+
+    domElement.innerHTML = `Hello ${name}!`;
 });
 ```
 
@@ -71,15 +73,13 @@ thee-minute-component.vue:
 ```vue
 <template>
 	<div>
-		Hello {{name}} from vue
+		Hello {{yourName}} from vue
 	</div>
 </template>
 <script>
 export default {
-	data(){
-		return {
-			name: 'world'
-		}
+	props: {
+		yourName: { type: String }
 	}
 }
 </script>
@@ -99,7 +99,6 @@ import Vue from 'vue/dist/vue.common';
 import ThreeMinuteComponent from './three-minute-component.vue'
 
 EmbeddableComponents.registerLibrary({Vue: Vue});
-
 EmbeddableComponents.registerVueComponent('three-minute-component', ThreeMinuteComponent)
 
 ```
@@ -112,24 +111,18 @@ That should work.
 
 three-minute-component.jsx:
 ```jsx
-
 import React from 'react';
 
 export default class extends React.Component {
-    constructor() {
-        super();
-
-        this.name = 'world';
-    }
-
 	render() {
 		return (
 			<div>
-				Hello {this.name} from React
+				Hello {this.props['your-name']} from React
 			</div>
 		)
 	}
 }
+
 ```
 
 The bootstrap for react should look like this:
@@ -148,8 +141,8 @@ import ThreeMinuteComponent from './three-minute-component.jsx'
 EmbeddableComponents.registerLibrary({React, ReactDOM});
 
 EmbeddableComponents.registerReactComponent('three-minute-component', ThreeMinuteComponent)
-
 ```
+
 
 
 
