@@ -14,6 +14,8 @@ See it in action: https://jsfiddle.net/x02Lwcna/
 
 [Check out Vue examples and more](http://fluxfx.nl/embeddable-components/examples/)
 
+[Embeddable components in three minutes](docs/Component-in-three-minutes.md)
+
 ## The goal
 Sharing and reusing end-user facing pieces of software, without using
 iframes. (Examples: media embeds, reservation widgets, calculators)
