@@ -1,6 +1,6 @@
 {
 	"name": "embeddable-components",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Embeddable Components Principle and implementation",
 	"main": "lib/EmbeddableComponents.js",
 	"files": [
@@ -15,8 +15,7 @@
 	},
 	"author": "Joshua Angnoe <joshua@fluxfx.nl>",
 	"license": "MIT",
-	"dependencies": {
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"@babel/cli": "^7.2.3",
 		"@babel/core": "^7.3.3",
