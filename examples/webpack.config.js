@@ -6,7 +6,8 @@ module.exports = {
     entry: {
         'some-react-component': './some-react-component-entrypoint',
 		'some-vue-component': './some-vue-component-entrypoint',
-		'vanilla-super-clock' : './vanilla-super-clock'
+		'vanilla-super-clock' : './vanilla-super-clock',
+		'some-svelte-component': './some-svelte-component-entrypoint.js'
     },
     mode: 'development',
     module: {
@@ -24,7 +25,12 @@ module.exports = {
           {
             test: /\.vue$/,
             loader: 'vue-loader'
-          }
+		  },
+		  {
+			test: /\.(html|svelte)$/,
+			exclude: /node_modules/,
+			use: 'svelte-loader'
+		  }
         ]
     },
     resolve: {
