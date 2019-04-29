@@ -12,7 +12,7 @@ Embed widgets by doing:
 
 See it in action: https://jsfiddle.net/x02Lwcna/
 
-[Check out Vue examples and more](http://fluxfx.nl/embeddable-components/examples/)
+[Check out Vue examples and more](http://fluxfx.nl/embeddable-components/examples/index.html)
 
 [Embeddable components in three minutes](docs/Component-in-three-minutes.md)
 
